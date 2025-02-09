@@ -1,3 +1,4 @@
 node_modules
 in.js
 .wwebjs_auth
+.wwebjs_cache
