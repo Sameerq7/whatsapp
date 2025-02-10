@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Voice Bot</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon2.png">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h2>WhatsApp Voice Bot</h2>
+        <button id="logout-btn" onclick="logoutUser()">Logout</button>
+    </div>
+    <div class="container">
+        <div id="qr-container">
+            <h2>Connect to WhatsApp</h2>
+            <p>Scan this QR Code to connect:</p>
+            <img id="qr-code" src="" alt="QR Code">
+        </div>
+
+        <div id="message-section">
+            <h2>Send a Message</h2>
+
+            <div class="input-group">
+                <label>Country Code:</label>
+                <select id="country-code">
+                    <option value="+91" selected>🇮🇳 India (+91)</option>
+                    <option value="+1">🇺🇸 USA (+1)</option>
+                    <option value="+44">🇬🇧 UK (+44)</option>
+                    <option value="+971">🇦🇪 UAE (+971)</option>
+                    <option value="custom">Other (Enter manually)</option>
+                </select>
+                <input type="text" id="custom-country-code" placeholder="Enter country code">
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number:</label>
+                <input type="text" id="phone-number" placeholder="Enter phone number (without +)">
+            </div>
+
+            <div class="input-group">
+                <label>Message:</label>
+                <input type="text" id="message-text" placeholder="Enter your message">
+            </div>
+
+            <button id="voice-btn">🎤 Speak</button>
+            <button onclick="sendMessage()">🚀 Send Message</button>
+            <p id="status"></p>
+
+            <h2>WhatsApp Contacts</h2>
+            <button id="fetch-contacts-btn">📋 Fetch Contacts</button>
+            <div id="contacts"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>📌 Developed by Sameer | <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

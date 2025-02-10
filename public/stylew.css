@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #121212;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+h1 {
+    color: #00ff00;
+}
+
+/* Inputs & Buttons */
+input, textarea, select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input, textarea, select {
+    background: #333;
+    color: white;
+}
+
+/* Country Code Dropdown */
+#country-code {
+    background: #222;
+    color: #00ff00;
+    font-weight: bold;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#country-code:focus {
+    outline: none;
+    border-color: #008000;
+}
+
+/* Contact List Dropdown */
+#contacts-list {
+    background: #222;
+    color: #00ff00;
+    font-weight: bold;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    background: #00ff00;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #008000;
+}
+
+/* QR Code */
+#qr-code {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+    border: 5px solid #00ff00;
+    border-radius: 10px;
+}
+
+/* Smooth Fade In */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
